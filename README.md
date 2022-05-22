@@ -1,5 +1,5 @@
 # Маленькое тестовое задание на React
-[Деплой](https://leontyev-accelerator-react-starter-pack.vercel.app/)
+[Деплой](http://react-test-one-gray.vercel.app/)
 ---
 
 ---
