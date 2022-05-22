@@ -2,13 +2,14 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import { logIn } from "../../store/userSlice";
+import { selectUserData } from "../../store/selectors/user-slice-selectors";
 
 import styles from "./login.module.css";
 
 export const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const userData = useSelector((state) => state.user);
+  const userData = useSelector(selectUserData);
 
   const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
@@ -46,7 +47,7 @@ export const Login = () => {
           className={styles.input}
           type="text"
           id="login"
-          placeholder="Логин"
+          placeholder="Логин - alex"
           required
           value={login}
           onInput={loginInputHandler}
@@ -61,7 +62,7 @@ export const Login = () => {
           className={styles.input}
           type="password"
           id="password"
-          placeholder="Пароль"
+          placeholder="Пароль - qwerty"
           required
           value={password}
           onInput={passwordInputHandler}
